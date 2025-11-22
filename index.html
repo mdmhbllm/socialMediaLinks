@@ -3,80 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Social Media Link</title>
+<title>My Social Media Links</title>
+
+<!-- ICONS (Font Awesome) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #f5f5f5;
-        text-align: center;
-        padding: 30px;
-    }
-    .container {
-        max-width: 450px;
-        margin: auto;
-        background: white;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    h2 {
-        margin-bottom: 20px;
-        color: #333;
-    }
+body {
+    font-family: Times New Roman, Arial Black;
+    background: linear-gradient(135deg, #4c6ef5, #b197fc);
+    text-align: center;
+    padding: 35px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    /* Common style for all buttons */
-    a {
-        text-decoration: none;
-        display: block;
-        margin: 12px 0;
-        padding: 14px;
-        color: white;
-        font-weight: bold;
-        border-radius: 10px;
-        transition: 0.25s;
-    }
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    min-height: 500px;
+}
+.typewriter-font {
+            font-family: "American Typewriter", serif;
+            font-weight: bold;          /* makes it bold */
+            font-size: 40px;            /* adjust size */
+            color: #000000;             /* blood-red color */
 
-    /* Individual colors for each platform */
-    .facebook {
-        background: #1877F2; /* Facebook blue */
-    }
-    .facebook:hover {
-        background: #0f5bb5;
-    }
+}
 
-    .instagram {
-        background: #E4405F; /* Instagram gradient pinkish */
-    }
-    .instagram:hover {
-        background: #b32c44;
-    }
+h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 48px;
+    color: #333;
+    font-weight: 400;
+}
 
-    .linkedin {
-        background: #0A66C2; /* LinkedIn dark blue */
-    }
-    .linkedin:hover {
-        background: #084c8a;
-    }
+a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 18px;
+}
 
-    .whatsapp {
-        background: #25D366; /* WhatsApp green */
-        color: white;
-    }
-    .whatsapp:hover {
-        background: #1da851;
-    }
+a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* ICON SPACING */
+a i {
+    margin-right: 12px;
+    font-size: 22px;
+}
+
+/* COLORS */
+.facebook { background: #1877F2; }
+.facebook:hover { background: #0f5bb5; }
+
+.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+.instagram:hover {
+    filter: brightness(1.1);
+}
+
+.linkedin { background: #0A66C2; }
+.linkedin:hover { background: #084c8a; }
+
+.X { background: #000; }
+.X:hover { background: #2b2b2b; }
+
+.whatsapp { background: #25D366; }
+.whatsapp:hover { background: #1da851; }
+
+.snapchat {
+    background: #FFFC00;
+    color: black;
+}
+.snapchat:hover { background: #e6db00; }
+
+.telegram { background: #229ED9; }
+.telegram:hover { background: #1b7fae; }
+
 </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Md. Mahbub Alam</h2>
+    <h2 class="typewriter-font">Md. Mahbub Alam</h2>
 
-    <!-- Links with individual classes -->
-    <a href="https://facebook.com/mhbxalm" target="_blank" class="facebook">Facebook</a>
-    <a href="https://instagram.com/mhbxalm" target="_blank" class="instagram">Instagram</a>
-    <a href="https://linkedin.com/in/mhbxalm" target="_blank" class="linkedin">LinkedIn</a>
-    <a href="https://wa.me/8801731279374" target="_blank" class="whatsapp">WhatsApp Chat</a>
+    <a href="https://facebook.com/mhbxalm" target="_blank" class="facebook">
+        <i class="fab fa-facebook"></i> Facebook
+    </a>
+
+    <a href="https://instagram.com/mhbxalm" target="_blank" class="instagram">
+        <i class="fab fa-instagram"></i> Instagram
+    </a>
+
+    <a href="https://linkedin.com/in/mhbxalm" target="_blank" class="linkedin">
+        <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+
+    <a href="https://x.com/mhbxalm" target="_blank" class="X">
+        <i class="fab fa-x-twitter"></i> X (Twitter)
+    </a>
+
+    <a href="https://wa.me/8801731279374" target="_blank" class="whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp Chat
+    </a>
+
+    <a href="https://www.snapchat.com/add/cdxaxac" target="_blank" class="snapchat">
+        <i class="fab fa-snapchat"></i> Snapchat
+    </a>
+
+    <a href="https://t.me/mhbxalm" target="_blank" class="telegram">
+        <i class="fab fa-telegram"></i> Telegram
+    </a>
+
 </div>
 
 </body>
