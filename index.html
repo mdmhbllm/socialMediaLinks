@@ -3,47 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Social Media Links</title>
+<title>Mahbub Alam • Links</title>
 
-<!-- ICONS (Font Awesome) -->
+<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+:root {
+    /* Sky blue gradient background */
+    --bg-main: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+    --text-color: #fff;
+    --card-bg: rgba(255,255,255,0.15);
+    --link-bg: rgba(255,255,255,0.2);
+}
+
+body.dark {
+    --bg-main: #0e0e0e;
+    --text-color: #fff;
+    --card-bg: rgba(255,255,255,0.05);
+    --link-bg: rgba(255,255,255,0.1);
+}
+
 body {
-    font-family: Times New Roman, Arial Black;
-    background: linear-gradient(135deg, #4c6ef5, #b197fc);
+    font-family: "American Typewriter", serif;
+    background: var(--bg-main);
     text-align: center;
     padding: 35px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.4s;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 .container {
     width: 90%;
     max-width: 600px;
-    background: white;
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
     padding: 40px;
     border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    min-height: 500px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    animation: fadeUp 1s ease;
 }
-.typewriter-font {
-            font-family: "American Typewriter", serif;
-            font-weight: bold;          /* makes it bold */
-            font-size: 40px;            /* adjust size */
-            color: #000000;             /* blood-red color */
 
+/* PROFILE ROW */
+.profile-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.profile-info {
+    text-align: left;
 }
 
 h2 {
-    font-family: 'Sacramento', cursive;
-    font-size: 35px;
-    color: #333;
-    font-weight: 400;
+    font-size: 40px;
+    color: var(--text-color);
+    margin-bottom: 5px;
 }
 
+.tagline {
+    font-size: 18px;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.8);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* LINKS */
 a {
     text-decoration: none;
     display: flex;
@@ -55,86 +95,95 @@ a {
     font-weight: bold;
     border-radius: 50px;
     transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     font-size: 18px;
+    background: var(--link-bg);
+    position: relative;
+    overflow: hidden;
 }
 
 a:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-/* ICON SPACING */
+/* ICON animation */
+a:hover i {
+    transform: rotate(10deg) scale(1.2);
+}
+
+/* ICON spacing */
 a i {
     margin-right: 12px;
     font-size: 22px;
+    transition: 0.3s;
 }
 
-/* COLORS */
-.facebook { background: #1877F2; }
-.facebook:hover { background: #0f5bb5; }
-
-.instagram {
-    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+/* Dark Mode Toggle */
+.toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
 }
-.instagram:hover {
-    filter: brightness(1.1);
+
+/* Animations */
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-.linkedin { background: #0A66C2; }
-.linkedin:hover { background: #084c8a; }
-
-.X { background: #000; }
-.X:hover { background: #2b2b2b; }
-
-.whatsapp { background: #25D366; }
-.whatsapp:hover { background: #1da851; }
-
-.snapchat {
-    background: #FFFC00;
-    color: black;
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
 }
-.snapchat:hover { background: #e6db00; }
 
-.telegram { background: #229ED9; }
-.telegram:hover { background: #1b7fae; }
-
+/* Responsive */
+@media (max-width: 500px) {
+    .profile-row {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .profile-info {
+        margin-bottom: 15px;
+    }
+}
 </style>
 </head>
 <body>
 
+<div class="toggle" onclick="toggleDark()">🌙</div>
+
 <div class="container">
-    <h2 class="typewriter-font">Mahbub Alam</h2>
 
-    <a href="https://facebook.com/mhbxalm" target="_blank" class="facebook">
-        <i class="fab fa-facebook"></i> Facebook
-    </a>
+    <div class="profile-row">
+        <div class="profile-info">
+            <h2>Md. Mahbub Alam</h2>
+            <div class="tagline">Social Media Links</div>
+        </div>
+        <img src="myphoto.jpeg" class="profile-img">
+    </div>
 
-    <a href="https://instagram.com/mhbxalm" target="_blank" class="instagram">
-        <i class="fab fa-instagram"></i> Instagram
-    </a>
-
-    <a href="https://linkedin.com/in/mhbxalm" target="_blank" class="linkedin">
-        <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
-
-    <a href="https://x.com/mhbxalm" target="_blank" class="X">
-        <i class="fab fa-x-twitter"></i> X (Twitter)
-    </a>
-
-    <a href="https://wa.me/8801731279374" target="_blank" class="whatsapp">
-        <i class="fab fa-whatsapp"></i> WhatsApp Chat
-    </a>
-
-    <a href="https://www.snapchat.com/add/cdxaxac" target="_blank" class="snapchat">
-        <i class="fab fa-snapchat"></i> Snapchat
-    </a>
-
-    <a href="https://t.me/mhbxalm" target="_blank" class="telegram">
-        <i class="fab fa-telegram"></i> Telegram
-    </a>
+    <a href="https://facebook.com/mhbxalm" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    <a href="https://instagram.com/mhbxalm" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://linkedin.com/in/mhbxalm" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://x.com/mhbxalm" target="_blank"><i class="fab fa-x-twitter"></i> X (Twitter)</a>
+    <a href="https://wa.me/8801731279374" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a>
+    <a href="https://www.snapchat.com/add/cdxaxac" target="_blank"><i class="fab fa-snapchat"></i> Snapchat</a>
+    <a href="https://t.me/mhbxalm" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
 
 </div>
+
+<script>
+function toggleDark() {
+    document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>
