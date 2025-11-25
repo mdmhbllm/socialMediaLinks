@@ -39,11 +39,11 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 800px;
     background: var(--card-bg);
     backdrop-filter: blur(15px);
-    padding: 40px;
+    padding: 80px;
     border-radius: 25px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.25);
     animation: fadeUp 1s ease;
@@ -68,7 +68,7 @@ h2 {
 }
 
 .tagline {
-    font-size: 18px;
+    font-size: 25px;
     color: var(--text-color);
     opacity: 0.8;
 }
@@ -146,11 +146,14 @@ a i {
 /* Responsive */
 @media (max-width: 500px) {
     .profile-row {
-        flex-direction: column-reverse;
-        text-align: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        text-align: left;
     }
-    .profile-info {
-        margin-bottom: 15px;
+    .profile-img {
+        width: 90px;
+        height: 90px;
     }
 }
 </style>
